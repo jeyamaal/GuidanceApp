@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sliit_s">
 
-</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUIDANCE APP"
+        android:id="@+id/textView10"
+        android:layout_x="155dp"
+        android:layout_y="453dp"
+        android:focusable="true"
+        android:elegantTextHeight="false"
+        android:textStyle="bold"
+        android:typeface="sans" />
+</AbsoluteLayout>

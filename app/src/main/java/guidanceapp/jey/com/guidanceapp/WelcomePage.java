@@ -54,7 +54,7 @@ public class WelcomePage extends Activity {
    }
 
     public void onCarrierClick(View view){
-        Intent intent= new Intent(WelcomePage.this,CarrierHome.class);
+        Intent intent= new Intent(WelcomePage.this,Faculty.class);
         startActivity(intent);
 
       }

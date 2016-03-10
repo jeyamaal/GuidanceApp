@@ -44,6 +44,14 @@
 
         <activity android:name=".CarrierHome"></activity>
 
+        <activity android:name=".Calculator"></activity>
+
+        <activity android:name=".Faculty"></activity>
+
+        <activity android:name=".Field"></activity>
+
+        <activity android:name=".CgpaHome"></activity>
+
 
 
 

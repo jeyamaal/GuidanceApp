@@ -1,10 +1,13 @@
 package guidanceapp.jey.com.guidanceapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -12,29 +15,23 @@ import android.widget.Toast;
  */
 public class CarrierHome extends Activity {
 
-    private RadioGroup radioYear;
-    private RadioButton year;
+   private RadioGroup radioYear;
+   private RadioButton year;
+   private Button onNextYear;
 
+   public String  yearSelected;
 
-   //private  RadioButton year_1,year_2;
+   private  RadioButton year_1,year_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carrierpath_home);
         radioYear = (RadioGroup) findViewById(R.id.radioYear);
-/*        year_1=(RadioButton)findViewById(R.id.radiobtn_1styear);
-        year_2=(RadioButton)findViewById(R.id.radioBtn_2ndyear);*/
+        onNextYear=(Button)findViewById(R.id.btn_next_year);
 
 
-        addListenerOnButton();
-
-
-
-
-
-
-
+       addListenerOnButton();
     }
 
 
@@ -51,25 +48,58 @@ public class CarrierHome extends Activity {
 
                 year = (RadioButton) findViewById(selectedId);
 
+                yearSelected = year.getText().toString();
+
                 Toast.makeText(getApplicationContext(),year.getText(), Toast.LENGTH_LONG).show();
 
-
-/*
-                if(year_1.isChecked()){
-
-                  Toast.makeText(getApplicationContext(),"Ceee",Toast.LENGTH_LONG);
               }
 
-                else{
-
-                  Toast.makeText(getApplicationContext(),"Not selectred",Toast.LENGTH_LONG);
-              }
-*/
-
-            }
-
-        });
+       });
 
     }
+
+
+
+
+
+    public void onNextYear(View view){
+
+
+
+        Intent intent= new Intent(CarrierHome.this,CgpaHome.class);
+        intent.putExtra("year",yearSelected);
+        startActivity(intent);
+
+
+
+    }
+
+
+
+
+
+/*    public void radioButtonSelected(View view){
+
+        RadioGroup radioGroup =(RadioGroup)findViewById(R.id.radioYear);
+
+        int id = radioGroup.getCheckedRadioButtonId();
+        if (id == -1){
+            //no item selected
+
+            Toast.makeText(getApplicationContext(),"Not selected",Toast.LENGTH_LONG).show();
+        }
+        else{
+            if (id == R.id.radiobtn_1styear){
+
+                Toast.makeText(getApplicationContext(),"Selected year1",Toast.LENGTH_LONG).show();
+            }
+        }
+    }*/
+
+
+   /* public void year1clicked(View v){
+        Toast.makeText(getApplicationContext(),"Geeeeeee",Toast.LENGTH_LONG).show();
+
+    }*/
 
 }

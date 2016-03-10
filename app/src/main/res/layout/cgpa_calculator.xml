@@ -3,11 +3,10 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="367dp"
-        android:layout_height="212dp"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
         android:layout_x="4dp"
-        android:layout_y="7dp"
-        android:id="@+id/">
+        android:layout_y="7dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="1stSemester"
-            android:id="@+id/textView5"
+            android:id="@+id/lab_1"
             android:layout_marginRight="28dp"
             android:layout_marginEnd="28dp"
             android:layout_below="@+id/textView4"
@@ -36,10 +35,98 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="2ndSemster"
-            android:id="@+id/textView6"
+            android:id="@+id/lab_2"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/textView5"
-            android:layout_alignStart="@+id/textView5"
+            android:layout_alignLeft="@+id/lab_1"
+            android:layout_alignStart="@+id/lab_1"
             android:layout_marginBottom="65dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_1st"
+            android:layout_alignTop="@+id/lab_1"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:hint="1st Semster GPA"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_2nd"
+            android:hint="2nd Semster GPA"
+            android:layout_alignBottom="@+id/lab_2"
+            android:layout_alignLeft="@+id/txt_1st"
+            android:layout_alignStart="@+id/txt_1st" />
+
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        android:layout_x="1dp"
+        android:layout_y="231dp"
+        android:id="@+id/relativeLayout" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_3rd"
+            android:layout_alignTop="@+id/lab_3"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7"
+            android:hint="1st Semster GPA"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2nd Year"
+            android:id="@+id/textView7"
+            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="1stSemester"
+            android:id="@+id/lab_3"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_below="@+id/textView7"
+            android:layout_toLeftOf="@+id/textView7"
+            android:layout_toStartOf="@+id/textView7"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="2ndSemster"
+            android:id="@+id/lab_4"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/lab_3"
+            android:layout_alignStart="@+id/lab_3"
+            android:layout_marginBottom="65dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_4th"
+            android:hint="2nd Semster GPA"
+            android:layout_alignBottom="@+id/lab_4"
+            android:layout_alignLeft="@+id/txt_3rd"
+            android:layout_alignStart="@+id/txt_3rd" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/btn_gpa"
+        android:layout_x="171dp"
+        android:layout_y="446dp"
+        android:onClick="onCGPAcal"/>
+
 </AbsoluteLayout>
