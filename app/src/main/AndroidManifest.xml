@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="guidanceapp.jey.com.guidanceapp" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +30,7 @@
                    <action android:name=".MainActivity"/>
                    <category android:name="android.intent.category.DEFAULT" />
 
-            </intent-filter>>
+            </intent-filter>
 
             </activity>
 
@@ -39,6 +41,9 @@
         <activity android:name=".Feedback"></activity>
 
         <activity android:name=".Course"></activity>
+
+        <activity android:name=".CourseHome"></activity>
+
 
         <activity android:name=".Year1_Sem1"></activity>
 
@@ -51,6 +56,14 @@
         <activity android:name=".Field"></activity>
 
         <activity android:name=".CgpaHome"></activity>
+
+        <activity android:name=".JobDescription"></activity>
+
+
+        <activity android:name=".Repeat"></activity>
+
+
+        <activity android:name=".courses.YearOne"></activity>
 
 
 

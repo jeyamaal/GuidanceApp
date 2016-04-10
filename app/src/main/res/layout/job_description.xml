@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/webView_jobDes"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="131dp"
+        android:layout_height="131dp"
+        android:id="@+id/progressBar"
+        android:layout_x="125dp"
+        android:layout_y="155dp"
+       android:progressDrawable="@drawable/circular_progress_bar"/>
+</AbsoluteLayout>

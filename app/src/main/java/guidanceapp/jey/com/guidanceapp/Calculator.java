@@ -76,49 +76,121 @@ public class Calculator extends Activity {
 
 
 
-    public void cal_cgpa(){
-
-         String a,b,c,d;
-
-         a=sem1.getText().toString();
-        /* b =sem2.getText().toString();
-         c=sem3.getText().toString();
-         d=sem4.getText().toString();*/
+    public void cal_cgpa() {
 
 
-        if(a.isEmpty()/*||b.isEmpty() || c.isEmpty()||d.isEmpty()*/){
+        if (yearFromCarrier.equals("1stYear 1stSemester")) {
+            String a;
 
-            Log.i("Empty field","error");
+            a = sem1.getText().toString();
 
-            Toast.makeText(getApplicationContext(),"Cannot be Emptyfield",Toast.LENGTH_LONG).show();
+
+            if (a.isEmpty()) {
+                Log.i("Empty field", "error");
+
+                Toast.makeText(getApplicationContext(), "Cannot be Emptyfield", Toast.LENGTH_LONG).show();
+
+            } else {
+                double ff = Double.parseDouble(a);
+
+                double results = cg.get1stsemCGPA(ff);
+
+                Toast.makeText(getApplicationContext(), "" + results + "", Toast.LENGTH_LONG).show();
+
+            }
 
         }
-        else {
-              double ff=Double.parseDouble(a);
 
-              double results=  cg.get1stsemCGPA(ff);
+            if (yearFromCarrier.equals("1stYear 2ndSemster")) {
 
-              Toast.makeText(getApplicationContext(),""+results+"",Toast.LENGTH_LONG).show();
+                String a, b;
 
-
-
+                a = sem1.getText().toString();
+                b = sem2.getText().toString();
 
 
-           // double first,second,third,forth;
+                if (a.isEmpty() || b.isEmpty()) {
+                    Log.i("Empty field", "error");
 
-          //  first = Double.parseDouble(a);
+                    Toast.makeText(getApplicationContext(), "Cannot be Emptyfield", Toast.LENGTH_LONG).show();
 
-           // Toast.makeText(getApplicationContext(),""+first+"",Toast.LENGTH_LONG);
+                } else {
+                    double f1 = Double.parseDouble(a);
+                    double f2 = Double.parseDouble(b);
 
-          //  String stringdouble = Double.toString(first);
+                    double results = cg.get2ndsemCGPA(f1, f2);
 
-          //  sem4.setText(year);
-        }
+                    Toast.makeText(getApplicationContext(), "" + results + "", Toast.LENGTH_LONG).show();
+
+                }
+
+
+            }
+
+
+                    if (yearFromCarrier.equals("2ndYear 1stSemester")) {
+
+                        String a, b,c;
+
+                        a = sem1.getText().toString();
+                        b = sem2.getText().toString();
+                        c = sem3.getText().toString();
+
+
+                        if (a.isEmpty() || b.isEmpty()|| c.isEmpty()) {
+                            Log.i("Empty field", "error");
+
+                            Toast.makeText(getApplicationContext(), "Cannot be Emptyfield", Toast.LENGTH_LONG).show();
+
+                        } else {
+                            double f1 = Double.parseDouble(a);
+                            double f2 = Double.parseDouble(b);
+                            double f3=Double.parseDouble(c);
+
+                            double results = cg.get3rdsemCGPA(f1, f2,f3);
+
+                            Toast.makeText(getApplicationContext(), "" + results + "", Toast.LENGTH_LONG).show();
+
+                        }
+
+
+                    }
+
+
+
+                            if (yearFromCarrier.equals("2ndYear 2ndSemester")) {
+
+                                String a, b,c,d;
+
+                                a = sem1.getText().toString();
+                                b = sem2.getText().toString();
+                                c = sem3.getText().toString();
+                                d = sem4.getText().toString();
+
+
+                                if (a.isEmpty() || b.isEmpty()|| c.isEmpty() || d.isEmpty()) {
+                                    Log.i("Empty field", "error");
+
+                                    Toast.makeText(getApplicationContext(), "Cannot be Emptyfield", Toast.LENGTH_LONG).show();
+
+                                } else {
+                                    double f1 = Double.parseDouble(a);
+                                    double f2 = Double.parseDouble(b);
+                                    double f3 = Double.parseDouble(c);
+                                    double f4 =  Double.parseDouble(d);
+
+                                    double results = cg.get4thsemCGPA(f1, f2,f3,f4);
+
+                                    Toast.makeText(getApplicationContext(), "" + results + "", Toast.LENGTH_LONG).show();
+
+                                }
+
+
+                            }
+
 
 
     }
-
-
 
 
     public void onCGPAcal(View v){

@@ -8,9 +8,9 @@
         android:layout_height="wrap_content"
         android:text="Select Semester"
         android:id="@+id/txt_year1"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -20,8 +20,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spin_1stsem"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="59dp"
         android:layout_below="@+id/txt_year1"
+        android:layout_alignLeft="@+id/txt_year1"
+        android:layout_alignStart="@+id/txt_year1"
+       />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_below="@+id/spin_1stsem"
+        android:layout_marginTop="106dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>

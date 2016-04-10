@@ -9,14 +9,14 @@ public class CgpaCalculation  {
 
     public double get1stsemCGPA(double first){
 
-        double result=(4*(first)+5*first)/5.0;
+        double result=(4*(first*4)+5*first)/21.0;
 
         return result;
     }
 
     public double get2ndsemCGPA(double first,double second){
 
-        double result=(second*19+get1stsemCGPA(first))/2.0;
+        double result=(((4*(second*4)+3*second)/19.0)+get1stsemCGPA(first))/2.0;
 
         return result;
     }
@@ -24,7 +24,7 @@ public class CgpaCalculation  {
 
     public double get3rdsemCGPA(double first,double second,double third){
 
-        double result=(third*20+get2ndsemCGPA(first,second))/3.0;
+        double result=((third)+get2ndsemCGPA(first,second))/2.0;
 
         return result;
     }
@@ -32,7 +32,7 @@ public class CgpaCalculation  {
 
     public double get4thsemCGPA(double first,double second,double third,double fourth){
 
-        double result=(fourth*20+get3rdsemCGPA(first,second,third))/4.0;
+        double result=((fourth)+get3rdsemCGPA(first,second,third))/2.0;
 
         return result;
     }
