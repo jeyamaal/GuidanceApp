@@ -2,9 +2,7 @@ package guidanceapp.jey.com.guidanceapp;
 
 import android.app.Activity;
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
@@ -16,7 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import guidanceapp.jey.com.guidanceapp.Database.DatabaseAccess;
@@ -25,7 +22,7 @@ import guidanceapp.jey.com.guidanceapp.courses.YearOne;
 /**
  * Created by Jeyamaal on 01-Mar-16.
  */
-public class Course extends Activity  {
+public class CoursePage extends Activity  {
 
     private SQLiteOpenHelper openHelper;
     private SQLiteDatabase database;
@@ -72,7 +69,7 @@ public class Course extends Activity  {
 
             if(item.equals("1st Year")){
 
-                Intent intent= new Intent(Course.this, YearOne.class);
+                Intent intent= new Intent(CoursePage.this, YearOne.class);
                 startActivity(intent);
 
             }
@@ -80,13 +77,13 @@ public class Course extends Activity  {
             if(item.equals("3rd Year")){
 
 
-                DatabaseAccess databaseAccess= DatabaseAccess.getInstance(Course.this);
+                DatabaseAccess databaseAccess= DatabaseAccess.getInstance(CoursePage.this);
                 databaseAccess.open();
 
                 List<String> quotes=databaseAccess.getQuotes();
                 databaseAccess.close();
 
-                ArrayAdapter<String> adapter= new ArrayAdapter<String>(Course.this,android.R.layout.simple_list_item_1,quotes);
+                ArrayAdapter<String> adapter= new ArrayAdapter<String>(CoursePage.this,android.R.layout.simple_list_item_1,quotes);
                 listView.setAdapter(adapter);
 
 

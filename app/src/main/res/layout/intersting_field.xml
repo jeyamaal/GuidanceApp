@@ -61,18 +61,18 @@
         android:layout_height="wrap_content"
         android:text="FieldDescription"
         android:id="@+id/btn_jobDes"
-        android:layout_x="227dp"
-        android:layout_y="397dp"
+        android:layout_x="118dp"
+        android:layout_y="274dp"
         android:onClick="onFieldDescription"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RepeatNav"
-        android:id="@+id/btn_nav_repeat"
-        android:layout_x="31dp"
-        android:layout_y="401dp"
-        android:onClick="onRepeatNav"/>
+        android:text="Submit"
+        android:id="@+id/btn_FinalSubmit"
+        android:layout_x="274dp"
+        android:layout_y="385dp"
+        android:onClick="onFinalSubmit"/>
 
 
 </AbsoluteLayout>

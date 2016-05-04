@@ -16,9 +16,9 @@ public class CourseHome extends Activity {
         setContentView(R.layout.course_home);
     }
 
-    public void onfacultyNext(View v){
+    public void onfacultyNext (View v){
 
-        Intent intent= new Intent(CourseHome.this,Course.class);
+        Intent intent= new Intent(CourseHome.this,CoursePage.class);
         startActivity(intent);
 
     }

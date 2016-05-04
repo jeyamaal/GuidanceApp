@@ -40,7 +40,7 @@
 
         <activity android:name=".Feedback"></activity>
 
-        <activity android:name=".Course"></activity>
+        <activity android:name=".CoursePage"></activity>
 
         <activity android:name=".CourseHome"></activity>
 
@@ -53,7 +53,7 @@
 
         <activity android:name=".Faculty"></activity>
 
-        <activity android:name=".Field"></activity>
+        <activity android:name=".InterestingField"></activity>
 
         <activity android:name=".CgpaHome"></activity>
 
@@ -64,6 +64,8 @@
 
 
         <activity android:name=".courses.YearOne"></activity>
+
+        <activity android:name=".FinalResult"></activity>
 
 
 

@@ -3,6 +3,7 @@ package guidanceapp.jey.com.guidanceapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,7 +40,7 @@ public class CgpaHome extends Activity {
         else{
 
             cgpa.setText("Noooo");
-        }
+          }
 
 
     }
@@ -49,11 +50,16 @@ public class CgpaHome extends Activity {
         intent.putExtra("year",yearSelected);
         startActivity(intent);
 
+
+
+
     }
 
     public void onCGPASubmit(View v){
 
-        Intent intent= new Intent(CgpaHome.this,Field.class);
+        Intent intent= new Intent(CgpaHome.this,Repeat.class);
+        intent.putExtra("year",yearSelected);
+        intent.putExtra("cgpa",cgpa.getText().toString());
         startActivity(intent);
 
 
