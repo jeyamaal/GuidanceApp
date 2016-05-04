@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:touchscreenBlocksFocus="true"
+    android:clickable="true"
+    android:background="@drawable/backcourses">
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+   </RelativeLayout>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="227dp"
+        android:id="@+id/btn"
+        android:layout_x="0dp"
+        android:layout_y="-12dp"
+        android:background="@drawable/cgcal"/>
+
+    <Button
+        android:layout_width="183dp"
+        android:layout_height="231dp"
+        android:id="@+id/btn_courses"
+        android:layout_x="201dp"
+        android:layout_y="-17dp"
+        android:onClick="onCourseClick"
+        android:background="@drawable/courses"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="179dp"
+        android:id="@+id/btn_career"
+        android:layout_x="1dp"
+        android:layout_y="214dp"
+        android:onClick="onCarrierClick"
+        android:background="@drawable/career"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="204dp"
+        android:layout_height="229dp"
+        android:id="@+id/btn3"
+        android:layout_x="1dp"
+        android:layout_y="388dp"
+        android:background="@drawable/aboutus"
+        android:lines="@integer/abc_config_activityDefaultDur"
+        android:focusable="true" />
+
+</AbsoluteLayout>
