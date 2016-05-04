@@ -6,18 +6,19 @@
     android:orientation="vertical"
     android:screenOrientation="landscape">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="                                 Year 1 Semester 1"
-        android:id="@+id/textView9"
-        android:layout_gravity="center_horizontal" />
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="188dp"
         android:id="@+id/imageView2"
         android:src="@drawable/y1s1"
         android:background="@drawable/y1s1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/y1s2"
+        android:background="@drawable/y1s2"/>
+
 </LinearLayout>

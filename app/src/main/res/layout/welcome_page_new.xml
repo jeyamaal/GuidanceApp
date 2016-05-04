@@ -20,6 +20,7 @@
         android:id="@+id/btn"
         android:layout_x="0dp"
         android:layout_y="-12dp"
+        android:onClick="onCGPAClick"
         android:background="@drawable/cgcal"/>
 
     <Button
