@@ -107,4 +107,13 @@ public class WelcomePage extends Activity {
 
       }
 
+
+    public void onCGPAClick(View view){
+
+         Intent intent= new Intent(WelcomePage.this,CarrierHomeForCGPAcal.class);
+         startActivity(intent);
+
+
+    }
+
 }

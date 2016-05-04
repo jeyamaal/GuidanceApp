@@ -74,6 +74,14 @@ public class CoursePage extends Activity  {
 
             }
 
+            if(item.equals("2nd Year")){
+
+                Intent intent= new Intent(CoursePage.this, YearOne.class);
+                startActivity(intent);
+
+            }
+
+
             if(item.equals("3rd Year")){
 
 
