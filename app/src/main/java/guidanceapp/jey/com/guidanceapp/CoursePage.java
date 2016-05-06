@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import guidanceapp.jey.com.guidanceapp.Database.DatabaseAccess;
+//import guidanceapp.jey.com.guidanceapp.Database.DatabaseAccess;
 import guidanceapp.jey.com.guidanceapp.courses.YearOne;
 
 /**
@@ -26,7 +26,7 @@ public class CoursePage extends Activity  {
 
     private SQLiteOpenHelper openHelper;
     private SQLiteDatabase database;
-    private static DatabaseAccess instance;
+    //private static DatabaseAccess instance;
 
     private ListView listView;
 
@@ -85,14 +85,14 @@ public class CoursePage extends Activity  {
             if(item.equals("3rd Year")){
 
 
-                DatabaseAccess databaseAccess= DatabaseAccess.getInstance(CoursePage.this);
-                databaseAccess.open();
+               // DatabaseAccess databaseAccess= DatabaseAccess.getInstance(CoursePage.this);
+               // databaseAccess.open();
 
-                List<String> quotes=databaseAccess.getQuotes();
-                databaseAccess.close();
+               // List<String> quotes=databaseAccess.getQuotes();
+                //databaseAccess.close();
 
-                ArrayAdapter<String> adapter= new ArrayAdapter<String>(CoursePage.this,android.R.layout.simple_list_item_1,quotes);
-                listView.setAdapter(adapter);
+               // ArrayAdapter<String> adapter= new ArrayAdapter<String>(CoursePage.this,android.R.layout.simple_list_item_1,quotes);
+                //listView.setAdapter(adapter);
 
 
                 listView.setOnItemClickListener(

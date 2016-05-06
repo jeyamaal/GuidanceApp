@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:clickable="true">
+    android:clickable="true"
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which Year "
-        android:id="@+id/textView2"
+        android:text="Select Year"
+        android:id="@+id/textView4"
+        android:layout_marginTop="51dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textColor="#ff8533"
         android:layout_below="@+id/absoluteLayout"
-        android:layout_alignLeft="@+id/radioYear"
-        android:layout_alignStart="@+id/radioYear"
-        android:layout_marginTop="79dp" />
+        android:layout_centerHorizontal="true" />
 
 
 
@@ -19,8 +22,8 @@
     <AbsoluteLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
         android:id="@+id/absoluteLayout">
 
 
@@ -31,9 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:onClick="onradioYear">
+        android:onClick="onradioYear"
+        android:background="#fffefe">
 
 
 
@@ -44,11 +48,16 @@
             android:layout_height="wrap_content"
             android:text="1stYear 1stSemester"
             android:checked="false"
-            android:layout_below="@+id/textView2"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
             android:clickable="true"
-            android:enabled="true" />
+            android:enabled="true"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="#ffffff" />
 
 
 
@@ -62,7 +71,10 @@
             android:layout_below="@+id/radioButton6"
             android:layout_alignLeft="@+id/radioButton6"
             android:layout_alignStart="@+id/radioButton6"
-            android:checked="false" />
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
 
         <RadioButton
 
@@ -73,7 +85,10 @@
             android:layout_centerVertical="true"
             android:layout_alignRight="@+id/radioYear"
             android:layout_alignEnd="@+id/radioYear"
-            android:checked="false" />
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
 
 
         <RadioButton
@@ -83,20 +98,47 @@
             android:id="@+id/radioBtn_2ndyear2ndsem"
             android:layout_below="@+id/radioYear"
             android:layout_centerHorizontal="true"
-            android:checked="false" />
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
 
     </RadioGroup>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/btn_next_year"
-        android:layout_marginBottom="87dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/radioYear"
-        android:layout_alignEnd="@+id/radioYear"
-        android:onClick="onNextYear"/>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_x="90dp"
+        android:layout_y="490dp"
+        android:background="#ff8533"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_next_year"
+            android:onClick="onNextYear"
+            android:layout_gravity="right|center_vertical"
+            android:layout_below="@+id/radioYear"
+            android:layout_alignRight="@+id/absoluteLayout"
+            android:layout_alignEnd="@+id/absoluteLayout"
+            android:background="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Next"
+            android:id="@+id/textView9"
+            android:layout_gravity="left|center_vertical"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </FrameLayout>
 
 
 </RelativeLayout>

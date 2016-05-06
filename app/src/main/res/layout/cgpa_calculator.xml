@@ -122,7 +122,7 @@
             android:layout_alignStart="@+id/txt_3rd" />
     </RelativeLayout>
 
-     <Button
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="submit"

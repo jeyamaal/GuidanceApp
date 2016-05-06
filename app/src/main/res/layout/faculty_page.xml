@@ -1,92 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Choose Faculty"
-        android:id="@+id/textView12"
-        android:layout_x="113dp"
-        android:layout_y="90dp" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="149dp"
-        android:layout_x="3dp"
-        android:layout_y="178dp">
+        android:text="Select Faculty"
+        android:id="@+id/textView4"
+        android:layout_marginTop="51dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textColor="#ff8533"
+        android:layout_below="@+id/absoluteLayout"
+        android:layout_centerHorizontal="true" />
 
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioGroup">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Computing"
-                android:id="@+id/radioButton"
-                android:layout_x="88dp"
-                android:layout_y="246dp"
-                android:checked="false" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enginnering"
-                android:id="@+id/radioButton2"
-                android:layout_x="98dp"
-                android:layout_y="277dp"
-                android:checked="false" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Business"
-                android:id="@+id/radioButton3"
-                android:layout_below="@+id/radioGroup"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:checked="false" />
-
-            <RadioButton
-                android:layout_width="217dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton4"
-                android:layout_x="-92dp"
-                android:layout_y="262dp"
-                android:layout_below="@+id/radioButton3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:checked="false"
-                android:text="Hospitality Management" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Architecture"
-                android:id="@+id/radioButton5"
-                android:layout_x="0dp"
-                android:layout_y="310dp"
-                android:checked="false" />
-
-
-        </RadioGroup>
-
-
-
-    </RelativeLayout>
-
-
-    <Button
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/btn_fac_next"
-        android:layout_x="184dp"
-        android:layout_y="420dp"
-        android:onClick="onfacultyNext"/>
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computing"
+            android:id="@+id/radioButton"
+            android:layout_x="88dp"
+            android:layout_y="246dp"
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enginnering"
+            android:id="@+id/radioButton2"
+            android:layout_x="98dp"
+            android:layout_y="277dp"
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            android:id="@+id/radioButton3"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
+
+        <RadioButton
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton4"
+            android:layout_x="-92dp"
+            android:layout_y="262dp"
+            android:layout_below="@+id/radioButton3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:text="Hospitality Management"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Architecture"
+            android:id="@+id/radioButton5"
+            android:layout_x="0dp"
+            android:layout_y="310dp"
+            android:checked="false"
+            android:textColor="#004080"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp" />
 
 
-</AbsoluteLayout>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_x="90dp"
+        android:layout_y="490dp"
+        android:background="#ff8533"
+        android:layout_marginBottom="89dp"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_fac_next"
+            android:layout_x="184dp"
+            android:layout_y="420dp"
+            android:onClick="onfacultyNext"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignRight="@+id/radioGroup"
+            android:layout_alignEnd="@+id/radioGroup"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Next"
+            android:id="@+id/textView21"
+            android:layout_gravity="left|center_vertical"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+
+</RelativeLayout>
