@@ -7,6 +7,8 @@ import android.os.Bundle;
 import  guidanceapp.jey.com.guidanceapp.R;
 import  guidanceapp.*;
 /**
+ * class for show course details for year one students
+ *
  * Created by Jeyamaal on 22-Mar-16.
  */
 public class YearOne extends Activity {

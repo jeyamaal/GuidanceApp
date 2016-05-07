@@ -1,12 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffe1f6ff">
 
     <TextView
-        android:layout_width="152dp"
-        android:layout_height="64dp"
-        android:text="New Text"
-        android:id="@+id/textView_Year"
-        android:layout_x="95dp"
-        android:layout_y="152dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtView_msg"
+        android:layout_x="43dp"
+        android:layout_y="32dp"
+        android:textColor="#ff8533"
+        android:textSize="40dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/txtView_elegible"
+        android:layout_x="10dp"
+        android:layout_y="120dp"
+        android:textColor="#ff308017"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtView_no1"
+        android:layout_x="10dp"
+        android:layout_y="170dp"
+        android:textSize="20dp"
+        android:textColor="#004080" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtView_no2"
+        android:layout_x="10dp"
+        android:layout_y="220dp"
+        android:textSize="20dp"
+        android:textColor="#004080" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtView_no3"
+        android:layout_x="10dp"
+        android:layout_y="270dp"
+        android:textSize="20dp"
+        android:textColor="#004080" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id="@+id/btn_home"
+        android:layout_x="115dp"
+        android:layout_y="475dp"
+        android:onClick="onHome"
+        android:textSize="25dp"
+        android:background="#004080"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Check Courses"
+        android:id="@+id/btn_checkCourse"
+        android:layout_x="41dp"
+        android:layout_y="394dp"
+        android:onClick="oncheckCourses"
+        android:background="#ff8533"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtView_no4"
+        android:layout_x="10dp"
+        android:layout_y="320dp"
+        android:textSize="20dp"
+        android:textColor="#004080" />
 </AbsoluteLayout>

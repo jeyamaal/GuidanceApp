@@ -76,8 +76,9 @@
         <activity android:name=".CarrierHomeForCGPAcal"></activity>
 
 
+        <activity android:name=".TabBar"></activity>
 
-
+        <activity android:name=".AboutUs"></activity>
 
 
 

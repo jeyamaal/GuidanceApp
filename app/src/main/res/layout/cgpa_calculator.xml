@@ -2,11 +2,12 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    android:background="#ffe1f6ff">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="201dp"
+        android:layout_height="213dp"
         android:layout_x="4dp"
         android:layout_y="7dp">
 
@@ -15,51 +16,61 @@
             android:layout_height="wrap_content"
             android:text="1st Year"
             android:id="@+id/textView4"
-            android:textSize="30dp"
+            android:textSize="40dp"
+            android:textColor="#ff8533"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="1stSemester"
             android:id="@+id/lab_1"
-            android:layout_marginRight="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_below="@+id/textView4"
-            android:layout_toLeftOf="@+id/textView4"
-            android:layout_toStartOf="@+id/textView4"
-            android:layout_marginTop="32dp" />
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_above="@+id/lab_2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="2ndSemster"
+            android:text="2ndSemester"
             android:id="@+id/lab_2"
-            android:layout_alignParentBottom="true"
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_alignBaseline="@+id/txt_2nd"
+            android:layout_alignBottom="@+id/txt_2nd"
             android:layout_alignLeft="@+id/lab_1"
-            android:layout_alignStart="@+id/lab_1"
-            android:layout_marginBottom="65dp" />
+            android:layout_alignStart="@+id/lab_1" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/txt_1st"
-            android:layout_alignTop="@+id/lab_1"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4"
-            android:hint="1st Semster GPA"/>
+            android:hint="GPA"
+            android:textSize="25dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginStart="47dp"
+            android:layout_alignBaseline="@+id/lab_1"
+            android:layout_alignBottom="@+id/lab_1"
+            android:layout_toRightOf="@+id/lab_2"
+            android:layout_toEndOf="@+id/lab_2" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/txt_2nd"
-            android:hint="2nd Semster GPA"
-            android:layout_alignBottom="@+id/lab_2"
-            android:layout_alignLeft="@+id/txt_1st"
-            android:layout_alignStart="@+id/txt_1st" />
+            android:hint="GPA"
+            android:textSize="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/txt_1st"
+            android:layout_alignEnd="@+id/txt_1st" />
 
     </RelativeLayout>
 
@@ -71,22 +82,27 @@
         android:id="@+id/relativeLayout" >
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/txt_3rd"
-            android:layout_alignTop="@+id/lab_3"
-            android:layout_alignLeft="@+id/textView7"
-            android:layout_alignStart="@+id/textView7"
-            android:hint="1st Semster GPA"/>
+            android:hint="GPA"
+            android:textSize="25dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginEnd="62dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2nd Year"
             android:id="@+id/textView7"
-            android:textSize="30dp"
+            android:textSize="40dp"
+            android:textColor="#ff8533"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,12 +110,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="1stSemester"
             android:id="@+id/lab_3"
-            android:layout_marginRight="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_below="@+id/textView7"
-            android:layout_toLeftOf="@+id/textView7"
-            android:layout_toStartOf="@+id/textView7"
-            android:layout_marginTop="32dp" />
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_alignBottom="@+id/txt_3rd"
+            android:layout_alignLeft="@+id/lab_4"
+            android:layout_alignStart="@+id/lab_4" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,28 +122,35 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="2ndSemster"
             android:id="@+id/lab_4"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/lab_3"
-            android:layout_alignStart="@+id/lab_3"
-            android:layout_marginBottom="65dp" />
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_alignTop="@+id/txt_4th"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:id="@+id/txt_4th"
-            android:hint="2nd Semster GPA"
-            android:layout_alignBottom="@+id/lab_4"
+            android:hint="GPA"
+            android:textSize="25dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/txt_3rd"
             android:layout_alignStart="@+id/txt_3rd" />
     </RelativeLayout>
 
-     <Button
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/btn_gpa"
-        android:layout_x="206dp"
+        android:layout_x="124dp"
         android:layout_y="477dp"
-        android:onClick="onCGPAcal"/>
+        android:onClick="onCGPAcal"
+        android:textColor="#ffffff"
+        android:background="#ff8533"
+        android:textSize="25dp" />
 
 </AbsoluteLayout>

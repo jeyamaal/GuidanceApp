@@ -16,108 +16,112 @@ import android.widget.Toast;
 public class Repeat extends Activity {
 
 
-    private RadioGroup radioRepeat;
-    private RadioButton radioSubReapeat;
-    private Button btn_repeat;
-    private EditText txt;
+            private RadioGroup radioRepeat;
+            private RadioButton radioSubReapeat;
+            private Button btn_repeat;
+            private EditText txt;
+            public String select_repeat,yearSelected,cgpa;
+            String noRepeat=null;
 
-    public String select_repeat;
-    String yearSelected,cgpa;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.repeat_page);
-        btn_repeat=(Button)findViewById(R.id.btn_repeat_submit);
-        radioRepeat=(RadioGroup) findViewById(R.id.radioRepeat);
-
-        txt=(EditText)findViewById(R.id.txt_repeat);
-
-        Bundle extras = getIntent().getExtras();
-
-        if (extras != null) {
-
-            yearSelected= extras.getString("year");
-            cgpa=extras.getString("cgpa");
-
-
-
-//get the value based on the key
-        }
-
-        else{
-
-          txt.setText("Noooo");
-        }
-
-
-
-        setInvisible();
-
-        addListenerOnButton();
-
-    }
-
-
-    public void addListenerOnButton() {
-
-
-        radioRepeat.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.repeat_page);
+                btn_repeat=(Button)findViewById(R.id.btn_repeat_submit);
+                radioRepeat=(RadioGroup) findViewById(R.id.radioRepeat);
+                txt=(EditText)findViewById(R.id.txt_repeat);
+
+                Bundle extras = getIntent().getExtras();
+
+                if (extras != null) {
+
+                    yearSelected= extras.getString("year");
+                    cgpa=extras.getString("cgpa");
 
 
-                int selectedId = radioRepeat.getCheckedRadioButtonId();
 
-                radioSubReapeat =(RadioButton) findViewById(selectedId);
-
-                select_repeat = radioSubReapeat.getText().toString();
-
-                Toast.makeText(getApplicationContext(), radioSubReapeat.getText(), Toast.LENGTH_LONG).show();
-
-                if(select_repeat.equals("YES")){
-                    setVisible();
-
+                 //get the value based on the key
                 }
 
                 else{
 
-                    setInvisible();
+                  txt.setText("Noooo");
                 }
 
 
 
+                   setInvisible();
+
+                   addListenerOnButton();
+
             }
 
-        });
 
-    }
-
-
-    public void setInvisible(){
-
-        txt.setVisibility(View.INVISIBLE);
-
-    }
-
-    public void setVisible(){
-
-        txt.setVisibility(View.VISIBLE);
-
-}
-
-    public void btn_repeat_submit(View v){
-
-        Intent intent= new Intent(Repeat.this,InterestingField.class);
-        intent.putExtra("year",yearSelected);
-        intent.putExtra("cgpa",cgpa);
-        intent.putExtra("repeat",txt.getText().toString());
-        startActivity(intent);
+            public void addListenerOnButton() {
 
 
+                radioRepeat.setOnClickListener(new View.OnClickListener() {
 
-    }
+                    @Override
+                    public void onClick(View v) {
+
+
+                        int selectedId = radioRepeat.getCheckedRadioButtonId();
+
+                        radioSubReapeat =(RadioButton) findViewById(selectedId);
+
+                        select_repeat = radioSubReapeat.getText().toString();
+
+                        Toast.makeText(getApplicationContext(), radioSubReapeat.getText(), Toast.LENGTH_LONG).show();
+
+                        if(select_repeat.equals("YES")){
+                            setVisible();
+
+                        }
+
+                        else if(select_repeat.equals("NO")){
+
+                            txt.setText("0");
+                            setInvisible();
+                        }
+
+                        else{
+                            setInvisible();
+
+                        }
+
+
+
+                    }
+
+                });
+
+            }
+
+
+            public void setInvisible(){
+
+                txt.setVisibility(View.INVISIBLE);
+
+            }
+
+            public void setVisible(){
+
+                txt.setVisibility(View.VISIBLE);
+
+             }
+
+            public void btn_repeat_submit(View v){
+
+                Intent intent= new Intent(Repeat.this,InterestingField.class);
+                intent.putExtra("year",yearSelected);
+                intent.putExtra("cgpa",cgpa);
+                intent.putExtra("repeat",txt.getText().toString());
+                //intent.putExtra("noRepeat",noRepeat);
+                startActivity(intent);
+
+
+             }
 
 }

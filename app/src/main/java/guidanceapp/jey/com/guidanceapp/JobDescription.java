@@ -12,15 +12,19 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 /**
+ * Class for see the details of different jobs in IT field
+ *
  * Created by Jeyamaal on 14-Mar-16.
  */
 public class JobDescription extends Activity {
+
 
     private ProgressBar spinner;
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.job_description);
 
@@ -41,6 +45,11 @@ public class JobDescription extends Activity {
 
     }
 
+
+    /**
+     * Redirect to webpage
+     *
+     */
 
     public class myWebClient extends WebViewClient{
 

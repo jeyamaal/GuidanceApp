@@ -9,45 +9,46 @@ import android.os.Bundle;
  */
 public class SplashScreen extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.splash);
 
 
-        Thread timerThread= new Thread(){
+            Thread timerThread= new Thread(){
 
-            @Override
-            public void run() {
-                super.run();
+                @Override
+                public void run() {
+                    super.run();
 
-                try{
+                    try{
 
-                    sleep(3000);
-
-                }
-
-                catch (InterruptedException e){
-
-                    e.printStackTrace();
-                }
-
-                finally {
-                    {
-                        Intent intent= new Intent(SplashScreen.this,MainActivity.class);
-                        startActivity(intent);
+                        sleep(3000);
 
                     }
+
+                    catch (InterruptedException e){
+
+                        e.printStackTrace();
+                    }
+
+                    finally {
+                        {
+                            Intent intent= new Intent(SplashScreen.this,MainActivity.class);
+                            startActivity(intent);
+
+                        }
+                    }
                 }
-            }
-        };
-       timerThread.start();
+            };
+           timerThread.start();
 
-   }
+       }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
+        @Override
+        protected void onPause() {
+            super.onPause();
+            finish();
+        }
+
 }

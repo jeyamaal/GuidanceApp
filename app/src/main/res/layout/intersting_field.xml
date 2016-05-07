@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffe1f6ff">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="46dp"
-        android:text="Choose the Intersting Field"
+        android:text="Choose an Intersting Field"
         android:id="@+id/textView11"
-        android:layout_x="96dp"
-        android:layout_y="35dp" />
+        android:layout_x="11dp"
+        android:layout_y="47dp"
+        android:textColor="#ff8533"
+        android:textSize="30dp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="80dp"
-        android:layout_y="97dp"
+        android:layout_x="75dp"
+        android:layout_y="126dp"
         android:id="@+id/radioSelectField">
 
 
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Coding"
-        android:id="@+id/rbtn_coding"
-        android:layout_x="75dp"
-        android:layout_y="175dp"
-        android:checked="false" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coding"
+            android:id="@+id/rbtn_coding"
+            android:layout_x="75dp"
+            android:layout_y="175dp"
+            android:checked="false"
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_marginBottom="20dp" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Networking"
-        android:id="@+id/rBtn_Networking"
-        android:layout_x="70dp"
-        android:layout_y="139dp"
-        android:checked="false" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Networking"
+            android:id="@+id/rBtn_Networking"
+            android:layout_x="70dp"
+            android:layout_y="139dp"
+            android:checked="false"
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_marginBottom="20dp" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Business Analyst"
-        android:id="@+id/rBtn_BA"
-        android:layout_x="80dp"
-        android:layout_y="100dp"
-        android:checked="false" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business Analyst"
+            android:id="@+id/rBtn_BA"
+            android:layout_x="80dp"
+            android:layout_y="100dp"
+            android:checked="false"
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_marginBottom="20dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -53,26 +65,35 @@
             android:id="@+id/bBtn_ITmanager"
             android:layout_x="75dp"
             android:layout_y="196dp"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="25dp"
+            android:textColor="#004080"
+            android:layout_marginBottom="20dp" />
     </RadioGroup>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="FieldDescription"
         android:id="@+id/btn_jobDes"
-        android:layout_x="118dp"
-        android:layout_y="274dp"
-        android:onClick="onFieldDescription"/>
+        android:layout_x="40dp"
+        android:layout_y="374dp"
+        android:onClick="onFieldDescription"
+        android:background="#ff8533"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/btn_FinalSubmit"
-        android:layout_x="274dp"
-        android:layout_y="385dp"
-        android:onClick="onFinalSubmit"/>
+        android:layout_x="97dp"
+        android:layout_y="460dp"
+        android:onClick="onFinalSubmit"
+        android:background="#ff8533"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
 
 
 </AbsoluteLayout>

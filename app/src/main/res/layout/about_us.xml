@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#ffe1f6ff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_marginLeft="0dp"
+        android:text="The SLIIT Career Guidance Unit (CGU) provides students with an enhanced understanding of career options and industry-required technical and non-technical skills, as well as available employment opportunities.We seek to empower our students with the knowledge and know-how needed to achieve their career aspirations, through a range of course-specific events, workshops and services"
+        android:id="@+id/textView22"
+        android:layout_gravity="center_vertical"
+        android:layout_x="2dp"
+        android:layout_y="323dp"
+        android:textColor="#004080" />
+
+    <TextView
+        android:layout_width="392dp"
+        android:layout_height="103dp"
+        android:text="            About Us"
+        android:id="@+id/textView2"
+        android:layout_x="-17dp"
+        android:layout_y="53dp"
+        android:textSize="40dp"
+        android:textColor="#ff8533" />
+
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:id="@+id/imageView4"
+        android:layout_x="111dp"
+        android:layout_y="134dp"
+        android:src="@drawable/sliit_logo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:id="@+id/btn_Home"
+        android:layout_x="149dp"
+        android:layout_y="472dp"
+        android:textColor="#fbf8f8"
+        android:background="#004080"
+        android:onClick="onHomee"/>
+</AbsoluteLayout>
